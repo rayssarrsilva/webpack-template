@@ -23,7 +23,13 @@ export default {
         {
         test: /\.(png|svg|jpg|jpeg|gif|mp4|webm|ogg)$/i,
         type: "asset/resource",
-        }
+        },
+        {
+          test: /\.(woff2?|eot|ttf|otf)$/i,
+          type: "asset/resource",
+          generator: {
+            filename: "asset/fonts/[name][ext]",
+        },
     ],
   },
 };
