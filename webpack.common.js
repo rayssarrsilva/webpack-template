@@ -3,7 +3,7 @@ import path from "node:path";
 
 export default {
   entry: "./src/index.js",
-  
+
   output: {
     filename: "main.js",
     path: path.resolve(process.cwd(), "dist"),
@@ -16,10 +16,6 @@ export default {
   ],
   module: {
     rules: [
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
       {
         test: /\.(png|svg|jpg|jpeg|gif|mp4|webm|ogg)$/i,
         type: "asset/resource",
