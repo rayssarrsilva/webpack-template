@@ -6,9 +6,18 @@ export default merge(common, {
 
   devtool: "eval-source-map",
 
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+
   devServer: {
     static: "./dist",
     watchFiles: ["./src/index.html"],
     open: true,
-  }
+  },
 });
